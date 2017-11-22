@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<link href="style1.css" rel="stylesheet">
+</head>
+<body>
+	<section>
+		<div class="container">
+			<div class="table">
+				<!-- use text-align and vertical-align to arrange the text inside the boxes -->
+				<div class="box" style="background-color: rgb(70, 116, 196); text-align: center;">
+					<h3 style="color: white">Text A</h3>
+				</div>
+				<div class="box" style="width:250px"></div>
+				<div class="box" style="background-color: yellow; vertical-align: middle; line-height: 40px; border-style: solid">
+					<h3 style="color: black">Text B</h3>
+				</div>
+				<div class="box" style="width:150px"></div>
+				<div class="box" style="background-color: rgb(114, 171, 78); text-align: center; vertical-align: bottom; line-height: 20px; border-style: solid">
+					<h3 style="color: white; font-size: small">Text C</h3>
+				</div>
+				<div class="box" style="width:200px"></div>
+				<div class="box" style="border-style: solid; text-align: center; vertical-align: middle;">
+					<img id="animatedPhoto" class="photo" src="http://www.freeiconspng.com/uploads/movie-icon-3.png"/>
+				</div>
+			</div>
+		</div>
+	</section>
+		
+	<section style="padding-top:100px">
+		<div class="container">
+			<div class="table2">
+				<div class="box" style="border-style: solid; text-align: center; vertical-align: middle;">
+					<!-- draggable image -->
+					<img id="dragImg" class="photo" src="http://www.pvhc.net/img125/ginlpasosghjsiamqzgp.png" draggable="true" ondragstart="drag(event);"/>
+				</div>
+				<div class="box" style="width: 200px"></div>
+				<div class="box" style="width: 800px; background-color: rgb(217, 217, 217); line-height: 40px; border: red solid 6px;">
+					<h3 style="color: red">Text D</h3>
+				</div>				
+			</div>
+		</div>
+	</section>
+	
+	<section style="padding-top:50px">
+		<div class="container">
+			<div class="table2">
+				<div id="dragDiv1" class="box" style="text-align: center; vertical-align: middle; border: green solid" 
+					ondrop="drop(event);" ondragover="allowDrop(event);" draggable="true" ondragstart="drag(event);">
+					<h3 style="color: black">Drag and Drop Area</h3>
+				</div>
+				<div class="box" style="width:250px"></div>
+				<div id="dragDiv2" class="box" style="text-align: center; vertical-align: middle; border-style: solid"
+					ondrop="drop(event);" ondragover="allowDrop(event);" draggable="true" ondragstart="drag(event);">
+					<h3 style="color: black">Drag and Drop Area</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript">
+		function allowDrop(ev) {
+			ev.preventDefault();
+		}
+
+		function drag(ev) {
+			ev.dataTransfer.setData("text", ev.target.id);
+		}
+
+		function drop(ev) {
+			ev.preventDefault();
+			var data = ev.dataTransfer.getData("text");
+			ev.target.appendChild(document.getElementById(data));
+		}
+	</script>
+
+</body>
+</html>

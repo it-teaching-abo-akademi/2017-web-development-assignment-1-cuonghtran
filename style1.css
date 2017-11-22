@@ -1,0 +1,46 @@
+/* the container helps the div scrollable with 'overflow: auto' */
+.container {
+	display: block;
+	height: 300px;
+	width: 100%;
+	overflow: auto;
+}
+
+/* table-layout: fixed makes sure that the "table cells" retain the pixel dimensions. */
+.table {
+	display: table;
+	table-layout: fixed;
+	width: 100%;
+}
+
+.table2 {
+	display: table;
+	table-layout: fixed;
+}
+
+/* the child boxes should contain 'display: table-cell' */
+.box {
+	width: 300px;
+	height: 300px;
+	display: table-cell;
+}
+
+.photo {
+	width: 60%;
+}
+
+#animatedPhoto {
+	animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+	0% {
+	  	background-color: rgb(203, 206, 27);
+	}
+	50% {
+		background-color: rgb(27, 206, 66);
+	}
+	100% {
+	  	background-color: rgb(13, 16, 230);
+	}
+}
