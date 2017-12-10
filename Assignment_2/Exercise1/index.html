@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<script src="../jquery-3.2.1.min.js"></script>
+	<script src="../JsBarcode.all.min.js"></script>
+	<script src="script.js"></script>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="col-12">
+		<label class="col-2">Virtual bar code:</label>
+		<input class="col-7" id="barCodeText" type="text" placeholder="enter the virtual bar code here" />
+	</div>
+	<div class="col-12">
+		<label class="col-2" for="btnDecode"></label>
+		<div class="col-7">
+			<button id="btnDecode" class="button">Decode</button>
+		</div>
+		
+	</div>
+	<div class="col-12">
+		<label class="col-9" for="btnDecode"></label>
+		<button id="btnHide" class="button">Hide</button>
+	</div>
+	<section class="col-11 infoSection">
+		<div class="col-6">
+			<div class="col-12">
+				<label class="col-3 infoLabel">Payee's IBAN: </label>
+				<label class="col-7" id="resultIban"></label>
+			</div>
+			<div class="col-12">
+				<label class="col-3 infoLabel">Payment Reference: </label>
+				<label class="col-7" id="resultReference"></label>
+			</div>
+		</div>
+		<div class="col-5">
+			<div class="col-12">
+				<label class="col-4 infoLabel">Amount to be paid: </label>
+				<label class="col-6" id="resultAmount"></label>
+			</div>
+			<div class="col-12">
+				<label class="col-4 infoLabel">Due date: </label>
+				<label class="col-6" id="resultDate"></label>
+			</div>
+		</div>
+		<div class="col-12" style="text-align: center">
+			<img id="barCodeBox" />
+		</div>
+	</section>
+</body>
+</html>

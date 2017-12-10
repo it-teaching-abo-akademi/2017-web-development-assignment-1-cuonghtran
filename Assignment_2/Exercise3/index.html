@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<script src="../jquery-3.2.1.min.js"></script>
+	<script src="script.js"></script>
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_bEel4VaNp42tqcvPT0pL8_T4C21LG3k&callback=initMap">
+	</script>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="col-11">
+		<label class="col-2">Select the bus line</label>
+		<select id="selectBusLine" class="col-5" style="height:28px">
+		</select>
+	</div>
+	<div class="col-11">
+		<div class="col-4">
+			<button id="btnShowBuses" class="button">Show Buses</button>
+		</div>
+		<div class="col-3" style="text-align: center">
+			<button id="btnRefresh" class="button">Refresh</button>
+		</div>
+		<div class="col-4" style="text-align: right">
+			<button id="btnShowRoute" class="button">Show Route</button>
+		</div>
+	</div>
+	<div class="col-11" style="align-items: center">
+		<div id="map"></div>
+	</div>
+</body>
+</html>

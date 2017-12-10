@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<script src="../jquery-3.2.1.min.js"></script>
+	<script src="script.js"></script>
+	<script async defer
+    	src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC_bEel4VaNp42tqcvPT0pL8_T4C21LG3k&callback=initMap">
+    </script>
+	<link href="style.css" rel="stylesheet">
+</head>
+<body>
+	<div class="col-12">
+		<div class="col-7">
+			<div class="col-12">
+				<label class="col-4" for="selectCountry">Select your country: </label>
+				<select id="selectCountry" class="col-6" style="margin: 10px">
+					<option value="fi">Finland</option>
+					<option value="se">Sweden</option>
+					<option value="fr">France</option>
+					<option value="de">Germany</option>
+				</select>
+			</div>
+			<div class="col-12">
+				<label class="col-4" for="txtZip">ZIP Code: </label>
+				<input id="txtZip" class="col-6" type="text">
+			</div>
+			<div class="col-12">
+				<label class="col-4" for=""></label>
+				<button id="btnSearch" class="button">Search</button>
+			</div>
+		</div>
+		<div id="historyContent" class="col-4" style="border: solid 1px; text-align:center">
+			<label for=""><strong>History of the last 10 searches</strong></label>
+			<ul id="listHistory" style="padding-left: 0px">
+			</ul>
+		</div>
+	</div>
+
+	<div class="col-12">
+		<div class="col-2">
+			<label></label>
+		</div>
+		<div id="placeResult" class="col-6" style="border: solid 1px">
+			<div class="col-12 tableHeader">
+				<div class="cell">Place name</div>
+				<div class="cell">Longitude</div>
+				<div class="cell">Latitude</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="col-12" style="align-items: center">
+		<div id="map"></div>
+	</div>
+	
+</body>
+</html>
