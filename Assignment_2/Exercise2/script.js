@@ -7,7 +7,7 @@ $(document).ready(function(){
 
 		// call the Zippopotam API to get places
 		$.ajax({
-			url: "http://api.zippopotam.us/" + selectedCountry + "/" + zipCode,
+			url: "https://api.zippopotam.us/" + selectedCountry + "/" + zipCode,
 			dataType: "json",
 			type: "GET",
 			success: function(data) {
