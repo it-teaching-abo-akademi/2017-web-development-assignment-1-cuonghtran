@@ -1,4 +1,4 @@
-var foliGtfsApiUrl = "http://data.foli.fi/gtfs/v0/20171130-162538";
+var foliGtfsApiUrl = "https://data.foli.fi/gtfs/v0/20180117-130104";
 var map;
 var drivingRoute;
 var shapesList = [];
@@ -105,7 +105,7 @@ function initMap() {
 function getBusesByLineName(lineName) {
 	var busesCoords = [];
 	$.ajax({
-		url: "http://data.foli.fi/siri/vm",
+		url: "https://data.foli.fi/siri/vm",
 		type: "get",
 		dataType: "json",
 		success: function(data) {
